@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .heading {
+       font-size: 1.3rem;
+       color:#4ade80;
+       font-weight: bold;
+       padding-bottom: 1rem;
+    }
+    
+  }
+  @layer components {
+    .sobuj{
+        border-bottom: 3px solid #374151;
+        padding-bottom: .6rem;
+    }
+    
+    
+  }
