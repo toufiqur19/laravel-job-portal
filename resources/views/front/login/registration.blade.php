@@ -8,7 +8,7 @@
                 <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white text-center">
                     Sign Up
                 </h1>
-                <form class="space-y-4 md:space-y-6" action="#">
+                <form class="space-y-4 md:space-y-6 text-white" action="#">
                     <div>
                         <label for="Name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Name</label>
                         <input type="text" name="name" id="name" placeholder="enter your name" class="focus:outline-none bg-gray-900 py-2 pl-3 rounded w-full" required="">
