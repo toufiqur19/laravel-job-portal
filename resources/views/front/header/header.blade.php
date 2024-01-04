@@ -6,10 +6,15 @@
             <ul class="space-y-2 mt-2 lg:flex-row flex flex-col lg:gap-5">
                 <li class="lg:mt-2 hover:text-green-600"><a href="{{route('home')}}">Home</a></li>
                 <li class="hover:text-green-600"><a href="{{route('findJob')}}">Find Job</a></li>
+                <li class="hover:text-green-600"><a href="{{route('signout')}}">signout</a></li>
             </ul>
             <div class="flex flex-col space-y-2 mt-2 mb-3 lg:flex-row lg:gap-5">
-                <button class="lg:mt-2 hover:text-green-600"><a href="{{route('login')}}">Login</a></button>
-                <button class="hover:text-green-600"><a href="post.html">Post Job</a></button>
+                @guest
+                <button class="lg:mt-2 hover:text-green-600"><a href="{{route('signin')}}">Login</a></button>
+                @endguest
+                @auth
+                <button class="hover:text-green-600"><a href="{{ route('jobPost')}}">Post Job</a></button>
+                @endauth
             </div>
         </div>
         <div id="hamberger" class="text-xl lg:hidden">

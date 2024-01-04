@@ -3,6 +3,7 @@
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\FindJobController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\jobPostController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,5 +23,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[HomeController::class,'index'])->name('home');
 route::get('/signup',[AccountController::class,'registration'])->name('signup');
-route::get('/signin',[AccountController::class,'login'])->name('login');
+Route::post('custom-registration', [AccountController::class, 'customRegistration'])->name('register.custom');
+route::get('/signin',[AccountController::class,'login'])->name('signin');
 route::get('/find-job',[FindJobController::class,'findJob'])->name('findJob');
+Route::post('custom-login', [AccountController::class, 'customLogin'])->name('login.custom');
+Route::get('signout', [AccountController::class, 'signOut'])->name('signout');
+Route::get('jobPost', [jobPostController::class, 'jobPost'])->name('jobPost');
